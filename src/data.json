@@ -7,16 +7,16 @@
       "totalPrice": "599",
       "discountedPrice": "499",
       "installments": "10",
-      "installmentsPrice": "49.9"
+      "installmentsPrice": "49,9"
     },
     {
       "id": 2,
       "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
       "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
-      "totalPrice": "999.99",
+      "totalPrice": "999,99",
       "discountedPrice": "499",
       "installments": "10",
-      "installmentsPrice": "49.9"
+      "installmentsPrice": "49,9"
     }
   ]
 }

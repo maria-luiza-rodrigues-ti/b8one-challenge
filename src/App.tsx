@@ -1,5 +1,30 @@
+import { products } from "./data.json";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  const productsList = products;
+
+  return (
+    <main>
+      <div className="App">
+        {productsList &&
+          productsList.map((product) => (
+            <div key={product.id}>
+              <img src={product.image} />
+              <h1>{product.title}</h1>
+              <span>{product.totalPrice}</span>
+              <span>{product.discountedPrice}</span>
+              <span>
+                em até{" "}
+                <strong>
+                  {product.installments}x de R$ {product.installmentsPrice}
+                </strong>{" "}
+                sem juros
+              </span>
+            </div>
+          ))}
+      </div>
+    </main>
+  );
 }
 
 export default App;
