@@ -5,7 +5,7 @@ function App() {
 
   return (
     <main>
-      <div className="App">
+      <div className="App flex">
         {productsList &&
           productsList.map((product) => (
             <div key={product.id}>
