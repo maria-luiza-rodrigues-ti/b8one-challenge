@@ -1,9 +1,66 @@
-import { Heart } from "lucide-react";
-
+import { Check, Heart } from "lucide-react";
 import { products } from "./data.json";
+import { useEffect, useState } from "react";
+
+interface ProductProps {
+  id: number;
+  title: string;
+  image: string;
+  totalPrice: string;
+  discountedPrice: string;
+  installments: string;
+  installmentsPrice: string;
+  wishlist: boolean;
+  cart: boolean;
+}
 
 function App() {
   const productsList = products;
+  const [wishlistItems, setWishlistItems] = useState<ProductProps[]>([]);
+  const [cartItems, setCartItems] = useState<ProductProps[]>([]);
+  const [productAddToCart, setProductAddToCart] = useState<{
+    [key: number]: boolean;
+  }>({});
+
+  function toggleWishlist(product: ProductProps) {
+    setWishlistItems((prevState) => {
+      const isInWishlist = !!prevState.find((item) => item.id === product.id);
+
+      if (isInWishlist) {
+        return prevState.filter((item) => item.id !== product.id);
+      } else {
+        return [...prevState, product];
+      }
+    });
+  }
+
+  function addProductToCart(product: ProductProps) {
+    setCartItems((prevState) => {
+      const isProductInCart = prevState.some((item) => item.id === product.id);
+
+      if (isProductInCart) {
+        return prevState;
+      }
+
+      return [...prevState, product];
+    });
+
+    setProductAddToCart((prevState) => ({
+      ...prevState,
+      [product.id]: !prevState[product.id],
+    }));
+  }
+
+  useEffect(() => {
+    const cartStateJSON = JSON.stringify(cartItems);
+    const wishlistStateJSON = JSON.stringify(wishlistItems);
+
+    localStorage.setItem("@b8one-challenge:cart-state-1.0.0", cartStateJSON);
+    localStorage.setItem(
+      "@b8one-challenge:wishlist-state-1.0.0",
+      wishlistStateJSON
+    );
+  }, [cartItems, wishlistItems]);
 
   return (
     <main>
@@ -15,9 +72,23 @@ function App() {
               className="bg-white rounded-lg p-8 space-y-8 w-min"
             >
               <div className="relative">
-                <div className="absolute right-0 h-12 w-12 flex items-center justify-center bg-grayscale-200 rounded-full transition-all cursor-pointer group hover:bg-pink-b8one-100">
-                  <Heart className="group-hover:text-red-b8one-500 group-hover:transition-all" />
-                </div>
+                <button
+                  onClick={() => toggleWishlist(product)}
+                  className={`${
+                    wishlistItems.find((item) => item.id === product.id)
+                      ? `bg-red-b8one-500 hover:bg-red-b8one-600`
+                      : `bg-grayscale-200 hover:bg-pink-b8one-100`
+                  }
+                  absolute right-0 h-12 w-12 flex items-center justify-center  rounded-full transition-all cursor-pointer group  `}
+                >
+                  <Heart
+                    className={`group-hover:text-red-b8one-500 group-hover:transition-all ${
+                      wishlistItems.find((item) => item.id === product.id)
+                        ? "fill-white text-white group-hover:text-white group-hover:fill-white"
+                        : ""
+                    }`}
+                  />
+                </button>
                 <img
                   src={product.image}
                   className="max-w-60 h-60 object-contain"
@@ -41,8 +112,22 @@ function App() {
                   sem juros
                 </span>
               </div>
-              <button className="bg-green-b8one-400 block w-full px-6 py-3 rounded-[5px] text-white text-base font-bold tracking-[-0.08px] transition-all hover:bg-green-b8one-600">
-                ADICIONAR
+              <button
+                onClick={() => addProductToCart(product)}
+                className={`${
+                  productAddToCart[product.id]
+                    ? `bg-green-b8one-100 hover:bg-green-100`
+                    : `bg-green-b8one-400 hover:bg-green-b8one-600 text-grayscale-900`
+                }
+                w-full px-6 py-3 rounded-[5px] text-white text-base font-bold tracking-[-0.08px] transition-all flex justify-center gap-3`}
+              >
+                {productAddToCart[product.id] ? (
+                  <>
+                    <Check /> ADICIONADO
+                  </>
+                ) : (
+                  "ADICIONAR"
+                )}
               </button>
             </article>
           ))}

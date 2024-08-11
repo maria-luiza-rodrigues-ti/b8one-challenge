@@ -7,7 +7,9 @@
       "totalPrice": "599,00",
       "discountedPrice": "499,00",
       "installments": "10",
-      "installmentsPrice": "49,90"
+      "installmentsPrice": "49,90",
+      "wishlist": false,
+      "cart": false
     },
     {
       "id": 2,
@@ -16,7 +18,9 @@
       "totalPrice": "999,99",
       "discountedPrice": "799,00",
       "installments": "10",
-      "installmentsPrice": "79,90"
+      "installmentsPrice": "79,90",
+      "wishlist": false,
+      "cart": false
     }
   ]
 }

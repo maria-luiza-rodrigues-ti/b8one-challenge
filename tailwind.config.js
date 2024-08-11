@@ -17,6 +17,8 @@ export default {
         "grayscale-900": "#1C1C1C",
         "pink-b8one-100": "#FEE5EC",
         "red-b8one-500": "#DA4B4F",
+        "red-b8one-600": "#C22539",
+        "green-b8one-100": "#A3F9B9",
         "green-b8one-400": "#40B25C",
         "green-b8one-600": "#1C6C3E",
       }
