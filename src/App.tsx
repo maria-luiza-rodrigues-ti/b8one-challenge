@@ -39,22 +39,27 @@ function App() {
     });
   }
 
-  function addProductToCart(product: ProductProps) {
+  function toggleProductToCart(product: ProductProps) {
     setCartItems((prevState) => {
       const isProductInCart = prevState.some((item) => item.id === product.id);
 
       if (isProductInCart) {
         toast.error("Produto removido do carrinho!");
-        return prevState;
+        return prevState.filter((item) => item.id !== product.id);
+      } else {
+        toast.success("Produto adicionado ao carrinho!");
+        return [...prevState, product];
       }
-      toast.success("Produto adicionado ao carrinho!");
-      return [...prevState, product];
     });
 
-    setProductAddToCart((prevState) => ({
-      ...prevState,
-      [product.id]: !prevState[product.id],
-    }));
+    setProductAddToCart((prevState) => {
+      const isProductInCart = cartItems.some((item) => item.id === product.id);
+
+      return {
+        ...prevState,
+        [product.id]: !isProductInCart,
+      };
+    });
   }
 
   useEffect(() => {
@@ -70,7 +75,7 @@ function App() {
 
   return (
     <main>
-      <div className="App flex gap-32 items-center justify-center mx-40 my-40 w-4/5">
+      <div className="App flex flex-wrap gap-10 md:flex-nowrap lg:gap-32 items-center justify-center px-4 lg:px-40 py-20 lg:py-40 w-full max-w-[304px]-">
         {productsList &&
           productsList.map((product) => (
             <article
@@ -119,7 +124,7 @@ function App() {
                 </span>
               </div>
               <button
-                onClick={() => addProductToCart(product)}
+                onClick={() => toggleProductToCart(product)}
                 className={`${
                   productAddToCart[product.id]
                     ? `bg-green-b8one-100 hover:bg-green-100`
