@@ -1,6 +1,9 @@
-import { Check, Heart } from "lucide-react";
-import { products } from "./data.json";
 import { useEffect, useState } from "react";
+
+import { Check, Heart } from "lucide-react";
+import { Toaster, toast } from "sonner";
+
+import { products } from "./data.json";
 
 interface ProductProps {
   id: number;
@@ -27,8 +30,10 @@ function App() {
       const isInWishlist = !!prevState.find((item) => item.id === product.id);
 
       if (isInWishlist) {
+        toast.error("Produto removido dos favoritos!");
         return prevState.filter((item) => item.id !== product.id);
       } else {
+        toast.success("Produto adicionado aos favoritos!");
         return [...prevState, product];
       }
     });
@@ -39,9 +44,10 @@ function App() {
       const isProductInCart = prevState.some((item) => item.id === product.id);
 
       if (isProductInCart) {
+        toast.error("Produto removido do carrinho!");
         return prevState;
       }
-
+      toast.success("Produto adicionado ao carrinho!");
       return [...prevState, product];
     });
 
@@ -132,6 +138,7 @@ function App() {
             </article>
           ))}
       </div>
+      <Toaster richColors />
     </main>
   );
 }
