@@ -1,6 +1,6 @@
 # B8one Challenge
 
-Essa é uma solução para o teste técnico da vaga na b8one. Este projeto é uma aplicação de e-commerce onde os usuários podem gerenciar seus produtos favoritos e suas compras de forma prática e intuitiva. A aplicação permite que os usuários adicionem e removam produtos tanto do carrinho de compras quanto da wishlist, com feedback visual através de notificações Toast. As informações sobre os produtos são armazenadas no localStorage, garantindo que as preferências do usuário sejam mantidas entre as sessões de navegação.
+Essa é uma solução para o teste técnico da vaga na B8one. Este projeto é uma aplicação de e-commerce onde os usuários podem gerenciar seus produtos favoritos e suas compras de forma prática e intuitiva. A aplicação permite que os usuários adicionem e removam produtos tanto do carrinho de compras quanto da wishlist, com feedback visual através de notificações Toast. As informações sobre os produtos são armazenadas no localStorage, garantindo que as preferências do usuário sejam mantidas entre as sessões de navegação.
 
 ![](./src/assets/screenshot.png)
 
@@ -8,12 +8,12 @@ Essa é uma solução para o teste técnico da vaga na b8one. Este projeto é um
 
 - [Visão Geral](#visao-geral)
   - [O desafio](#o-desafio)
-  - [Como rodar o projeto](#como-rodar-o-projeto)
   - [Links](#links)
 - [Meu processo](#meu-process)
   - [Funcionalidades](#funcionalidades) 
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Autora](#autora)
+- [Como rodar o projeto](#como-rodar-o-projeto)
+- [Autor](#autor)
 
 
 ## Visão Geral
@@ -31,12 +31,12 @@ Requisitos do desafio:
 
 ### Funcionalidade
 
-- Adicionar ao Carrinho: Os usuários podem adicionar produtos ao carrinho clicando no botão "Adicionar". O produto será armazenado e exibido no carrinho de compras.
-- Remover do Carrinho: Produtos no carrinho podem ser removidos com um simples clique, e a lista será atualizada automaticamente.
+- Adicionar ao Carrinho: Os usuários podem adicionar produtos ao carrinho clicando no botão "Adicionar".
+- Remover do Carrinho: Produtos no carrinho podem ser removidos ao clicar o no botão de "Adicionado".
 - Adicionar à Wishlist: Para adicionar um produto à wishlist, basta clicar no ícone de coração. O produto será salvo na lista de desejos do usuário.
-- Remover da Wishlist: Itens da wishlist podem ser removidos facilmente, e a lista será atualizada em tempo real.
+- Remover da Wishlist: Itens da wishlist podem ser removidos facilmente clicando no ícone de coração.
 - Feedback Visual: Sempre que um produto for adicionado ou removido do carrinho ou da wishlist, uma notificação (Toast) aparecerá no canto inferior direito da tela, confirmando a ação.
-- Persistência de Dados: Todos os produtos adicionados ao carrinho ou à wishlist são armazenados no localStorage do navegador. Isso garante que, ao recarregar a página ou fechar o     navegador, os dados permanecem intactos e sincronizados com as ações anteriores do usuário.
+- Persistência de Dados: Todos os produtos adicionados ao carrinho ou à wishlist são armazenados no localStorage do navegador. Isso garante que, ao recarregar a página ou fechar o navegador, os dados permanecem intactos e sincronizados com as ações anteriores do usuário.
 
 ### Tecnologias utilizadas
 
@@ -78,7 +78,11 @@ $ yarn dev
 - URL: [https://maria-luiza-rodrigues-ti.github.io/b8one-challenge/](https://maria-luiza-rodrigues-ti.github.io/b8one-challenge/)
   
 
-## Author
+## Autor
 
-- [@maria-luiza-rodrigues-ti](https://www.frontendmentor.io/profile/maria-luiza-rodrigues-ti)
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86676797?v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Maria Luiza Rodrigues</b></sub></a>
+
+---
 
