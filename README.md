@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+# B8one Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Essa é uma solução para o teste técnico da vaga na b8one.
 
-Currently, two official plugins are available:
+## Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Visão Geral](#visao-geral)
+  - [O desafio](#o-desafio)
+  - [Screenshot](#screenshot)
+  - [Como rodar o projeto](#como-rodar-o-projeto)
+  - [Links](#links)
+- [Meu processo](#meu-process)
+  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Autora](#autora)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Visão Geral
 
-- Configure the top-level `parserOptions` property like this:
+### O desafio
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+O desafio envolverá os seguintes requisitos:
+
+ - Criar um array de produtos com dois objetos: cada objeto deve conter os atributos necessários conforme layout
+ - Renderizar esses produtos dentro da div className "App"
+ - Fazer a estilização e implementação conforme layout
+ - Subir o projeto em alguma infra: Vercel, Netlify, Heroku ou qualquer outra de preferência.
+
+### Screenshot
+
+![](./src/assets/screenshot.png)
+
+### Como rodar o projeto
+
+```bash
+
+# Clone este repositório
+$ git clone https://github.com/maria-luiza-rodrigues-ti/b8one-challenge 
+
+# Vá para a pasta da aplicação Front End
+$ cd b8one-challenge
+
+# Instale as dependências
+$ npm install
+ou
+$ yarn install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
+ou
+$ yarn dev
+
+    Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver os resultados.
+
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Links
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- URL: [https://maria-luiza-rodrigues-ti.github.io/b8one-challenge/](https://maria-luiza-rodrigues-ti.github.io/b8one-challenge/)
+  
+## Meu processo
+
+### Tecnologias utilizadas
+
+- [ReactJS](https://pt-br.react.dev/blog/2023/03/16/introducing-react-dev)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## Author
+
+- [@maria-luiza-rodrigues-ti](https://www.frontendmentor.io/profile/maria-luiza-rodrigues-ti)
+
