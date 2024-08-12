@@ -127,14 +127,14 @@ function App() {
                 onClick={() => toggleProductToCart(product)}
                 className={`${
                   productAddToCart[product.id]
-                    ? `bg-green-b8one-100 hover:bg-green-100`
-                    : `bg-green-b8one-400 hover:bg-green-b8one-600 text-grayscale-900`
+                    ? `bg-green-b8one-100 hover:bg-green-100 text-grayscale-900 `
+                    : `bg-green-b8one-400 hover:bg-green-b8one-600 text-white`
                 }
-                w-full px-6 py-3 rounded-[5px] text-white text-base font-bold tracking-[-0.08px] transition-all flex justify-center gap-3`}
+                w-full px-6 py-3 rounded-[5px] text-base font-bold tracking-[-0.08px] transition-all flex justify-center gap-3`}
               >
                 {productAddToCart[product.id] ? (
                   <>
-                    <Check /> ADICIONADO
+                    <Check className="text-grayscale-900" /> ADICIONADO
                   </>
                 ) : (
                   "ADICIONAR"
@@ -142,7 +142,6 @@ function App() {
               </button>
             </article>
           ))}
-        +
       </div>
       <Toaster richColors />
     </main>
