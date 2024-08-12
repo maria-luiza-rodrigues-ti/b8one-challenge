@@ -31,12 +31,12 @@ Requisitos do desafio:
 
 ### Funcionalidade
 
-- Adicionar ao Carrinho: Os usuários podem adicionar produtos ao carrinho clicando no botão "Adicionar".
-- Remover do Carrinho: Produtos no carrinho podem ser removidos ao clicar o no botão de "Adicionado".
-- Adicionar à Wishlist: Para adicionar um produto à wishlist, basta clicar no ícone de coração. O produto será salvo na lista de desejos do usuário.
-- Remover da Wishlist: Itens da wishlist podem ser removidos facilmente clicando no ícone de coração.
-- Feedback Visual: Sempre que um produto for adicionado ou removido do carrinho ou da wishlist, uma notificação (Toast) aparecerá no canto inferior direito da tela, confirmando a ação.
-- Persistência de Dados: Todos os produtos adicionados ao carrinho ou à wishlist são armazenados no localStorage do navegador. Isso garante que, ao recarregar a página ou fechar o navegador, os dados permanecem intactos e sincronizados com as ações anteriores do usuário.
+- **Adicionar ao Carrinho:** Os usuários podem adicionar produtos ao carrinho clicando no botão "Adicionar".
+- **Remover do Carrinho:** Produtos no carrinho podem ser removidos ao clicar o no botão de "Adicionado".
+- **Adicionar à Wishlist:** Para adicionar um produto à wishlist, basta clicar no ícone de coração. O produto será salvo na lista de desejos do usuário.
+- **Remover da Wishlist:** Itens da wishlist podem ser removidos facilmente clicando no ícone de coração.
+- **Feedback Visual:** Sempre que um produto for adicionado ou removido do carrinho ou da wishlist, uma notificação (Toast) aparecerá no canto inferior direito da tela, confirmando a ação.
+- **Persistência de Dados:** Todos os produtos adicionados ao carrinho ou à wishlist são armazenados no localStorage do navegador. Isso garante que, ao recarregar a página ou fechar o navegador, os dados permanecem intactos e sincronizados com as ações anteriores do usuário.
 
 ### Tecnologias utilizadas
 
